@@ -1,16 +1,22 @@
 import React from "react";
-import Box from '@mui/material/Box';
-import HeaderAvatarChip from '../../Atoms/HeaderAvatar/HeaderAvatarChip';
-import styles from "./Header.styles";
-import { createUseStyles } from 'react-jss';
+import { Box, Typography } from '@mui/material';
+import HeaderAvatar from '../../Atoms/HeaderAvatar/HeaderAvatar';
+import { createUseStyles } from "react-jss";
 
-export default function Header(props){
-    const useStyles = createUseStyles(styles);
-    const classes = useStyles(props);
+const headerStyles = createUseStyles({
+    headerContainer: {
+        backgroundColor: "#294257",
+        padding: 20
+    }
+})
+
+export default function Header(){
+    const classes = headerStyles();
 
     return (
         <Box className={classes.headerContainer}>
-            <HeaderAvatarChip/>
+            <HeaderAvatar/>
+            <Typography variant='h1' className={classes.headerTitleText}>Jace Edwards Coding Portfolio</Typography>
         </Box>
     )
 }
