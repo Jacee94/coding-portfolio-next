@@ -1,32 +1,38 @@
-import { grey } from "@mui/material/colors";
 import { createUseStyles } from "react-jss";
 
 const headerStyles = createUseStyles({
     headerContainer: {
+        display: 'flex',
         backgroundColor: "#294257",
         padding: 20,
-        display: 'flex'
+        height: 145
     },
     headerAvatarBox: {
         display: 'flex',
-        border: '2px solid #a3a3a3',
-        padding: 10,
-        borderRadius: 50
+        alignSelf: 'center',
+        backgroundColor: '#203344',
+        borderRadius: 60,
+        width: 'fit-content',
+        height: 'fit-content',
+        transition: ['padding'],
+        transitionDuration: 500,
+
+        '&:hover': {
+            padding: 15
+        }
     },
     headerTitleTextBox: {
         display: 'flex',
         flexDirection: 'column',
-        maxWidth: 0,
-        overflow: 'hidden'
+        marginLeft: 15,
+        marginRight: 10,
     },
     headerTitleText: {
         fontFamily: '"Source Code Pro"',
         color: 'white',
-        fontSize: '30px'
+        fontSize: '30px',
+        whiteSpace: 'nowrap'
     }
 })
-
-// marginLeft: 15,
-// marginRight: 10,
 
 export default headerStyles;
