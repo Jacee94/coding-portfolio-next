@@ -1,22 +1,20 @@
 import React from "react";
 import { Box, Typography } from '@mui/material';
 import HeaderAvatar from '../../Atoms/HeaderAvatar/HeaderAvatar';
-import { createUseStyles } from "react-jss";
-
-const headerStyles = createUseStyles({
-    headerContainer: {
-        backgroundColor: "#294257",
-        padding: 20
-    }
-})
+import headerStyles from "./Header.styles";
 
 export default function Header(){
     const classes = headerStyles();
 
     return (
         <Box className={classes.headerContainer}>
-            <HeaderAvatar/>
-            <Typography variant='h1' className={classes.headerTitleText}>Jace Edwards Coding Portfolio</Typography>
+            <Box className={classes.headerAvatarBox}>
+                <HeaderAvatar/>
+                <Box className={classes.headerTitleTextBox}>
+                    <Typography variant='h1' className={classes.headerTitleText}>Jace Edwards</Typography>
+                    <Typography variant='h1' className={classes.headerTitleText}>Coding Portfolio</Typography>
+                </Box>
+            </Box>
         </Box>
     )
 }

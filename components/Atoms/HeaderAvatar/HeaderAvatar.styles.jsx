@@ -1,11 +1,10 @@
-import styled from '@mui/styled-engine';
-import { Chip } from '@mui/material';
+import { createUseStyles } from "react-jss";
 
-export const BaseChip = styled(Chip)(({ theme }) => ({
-  height: 52,
-  borderRadius: 26
-}));
+const headerAvatarStyles = createUseStyles({
+    headerAvatar: {
+      height: 75,
+      width: 75
+    }
+})
 
-export default {
-  BaseChip,
-}
+export default headerAvatarStyles
