@@ -9,9 +9,10 @@ export default class JssDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"} />
           <link href="https://fonts.googleapis.com/css2?family=Secular+One&family=Source+Code+Pro&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
         </Head>
         <body>
-          <Main />
+          <Main/>
           <NextScript />
         </body>
       </Html>

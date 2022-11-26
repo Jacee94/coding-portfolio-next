@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Header from '../components/Elements/Header/Header'
+import { Header, Hero } from '../components/index';
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
 
       <main>
         <Header></Header>
+        <Hero></Hero>
       </main>
     </>
   )
