@@ -4,6 +4,7 @@ export const heroContentStyles = createUseStyles({
     heroContentContainer: {
         display: 'flex',
         alignItems: 'center',
+
         '& > *': {
             margin: 40
         }
@@ -22,17 +23,25 @@ export const heroContentStyles = createUseStyles({
     heroContentAboutContainer: {
         display: 'flex',
         backgroundImage: 'linear-gradient(rgba(23,37,49,0.75), rgba(69,111,147,0.75))',
+        border: 'solid 3px #172531',
         borderRadius: 20,
+        transition: ['transform'],
+        transitionDuration: 200,
 
         '& > *': {
             margin: 20
+        },
+
+        '&:hover': {
+            transform: 'scale(1.05)'
         }
     },
     heroContentAboutImgWrapper: {
         '& img': {
             height: 300,
             width: 300,
-            borderRadius: 20
+            borderRadius: 20,
+            border: 'solid 2px #172531',
         }
     },
     heroContentAboutDesc: {

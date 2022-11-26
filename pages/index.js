@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Header, Hero } from '../components/index';
+import { Header, Hero, Projects } from '../components/index';
 
 export default function Home() {
   return (
@@ -16,6 +16,7 @@ export default function Home() {
       <main>
         <Header></Header>
         <Hero></Hero>
+        <Projects></Projects>
       </main>
     </>
   )

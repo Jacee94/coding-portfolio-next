@@ -6,8 +6,8 @@ const headerStyles = createUseStyles({
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: "#294257",
-    borderBottom: '4px solid black',
-    borderTop: '4px solid black',
+    borderBottom: '3px solid black',
+    borderTop: '3px solid black',
     padding: '20px 40px 20px 30px',
     height: 145,
   },
@@ -17,8 +17,9 @@ const headerStyles = createUseStyles({
     borderRadius: 60,
     width: "fit-content",
     height: "fit-content",
+    border: 'solid 2px black',
     transition: ["padding"],
-    transitionDuration: 500,
+    transitionDuration: 300,
 
     "&:hover": {
       padding: 15,

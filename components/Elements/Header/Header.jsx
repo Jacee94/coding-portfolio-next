@@ -18,7 +18,7 @@ export default function Header() {
         onMouseLeave={() => setHeaderAvatarHover(false)}
       >
         <HeaderAvatar />
-        <Collapse in={headerAvatarHover} orientation="horizontal" timeout={500}>
+        <Collapse in={headerAvatarHover} orientation="horizontal" timeout={300}>
           <Box className={classes.headerTitleTextBox}>
             <Typography variant="h1" className={classes.headerTitleText}>
               Jace Edwards
