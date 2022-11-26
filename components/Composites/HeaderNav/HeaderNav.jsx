@@ -29,7 +29,7 @@ export default function HeaderNav() {
         value={value}
         onChange={handleChange}
         className={classes.tabs}
-        TabIndicatorProps={{ sx: { backgroundColor: "#9bb7d0" } }}
+        TabIndicatorProps={{ sx: { backgroundColor: "white" } }}
       >
         <LinkTab className={classes.tab} label="About Me"></LinkTab>
         <LinkTab className={classes.tab} label="Projects"></LinkTab>

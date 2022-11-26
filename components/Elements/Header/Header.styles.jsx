@@ -6,6 +6,8 @@ const headerStyles = createUseStyles({
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: "#294257",
+    borderBottom: '4px solid black',
+    borderTop: '4px solid black',
     padding: '20px 40px 20px 30px',
     height: 145,
   },

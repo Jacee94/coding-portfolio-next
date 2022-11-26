@@ -2,21 +2,29 @@ import { createUseStyles } from "react-jss";
 
 const HeaderNavStyles = createUseStyles({
   tab: {
-    color: "white",
+    color: "#c7daeb",
+    textShadow: "2px 2px 2px black",
     fontFamily: "Source Sans Pro",
     fontSize: 25,
+    borderRadius: "10px",
+    transition: ['background-color'],
+    transitionDuration: 250,
+
+    '&:not(.Mui-selected):hover': {
+      backgroundColor: '#243b4d',
+    },
 
     "&.Mui-selected": {
-      color: "#9bb7d0",
+      color: "white",
     },
 
-    "&:first-child": {
-      borderRadius: "10px 0 0 10px",
+    "& > *": {
+      borderRadius: "10px",
     },
 
-    "&:last-child": {
-      borderRadius: "0 10px 10px 0",
-    },
+    '& .MuiTouchRipple-root': {
+      color: '#0c131a'
+    }
   },
 });
 
