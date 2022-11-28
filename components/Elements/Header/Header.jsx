@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography } from "@mui/material";
-import { Collapse } from "@mui/material";
+import { Box, Typography, Collapse } from "@mui/material";
 import HeaderAvatar from "../../Atoms/HeaderAvatar/HeaderAvatar";
 import HeaderNav from "../../Composites/HeaderNav/HeaderNav";
 import headerStyles from "./Header.styles";

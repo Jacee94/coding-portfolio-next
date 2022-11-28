@@ -26,6 +26,12 @@ const HeaderNavStyles = createUseStyles({
       color: '#0c131a'
     }
   },
+
+  '@media (max-width: 720px)': {
+    tab: {
+      minWidth: 55
+    }
+  }
 });
 
 export default HeaderNavStyles;

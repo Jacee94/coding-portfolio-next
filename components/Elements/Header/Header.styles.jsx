@@ -3,13 +3,13 @@ import { createUseStyles } from "react-jss";
 const headerStyles = createUseStyles({
   headerContainer: {
     display: "flex",
-    justifyContent: 'space-between',
+    justifyContent: 'end',
     alignItems: 'center',
     backgroundColor: "#294257",
     borderBottom: '3px solid black',
     borderTop: '3px solid black',
-    padding: '20px 40px 20px 30px',
-    height: 145,
+    padding: '15px 40px 15px 30px',
+    height: 'auto',
   },
   headerAvatarBox: {
     display: "flex",
@@ -21,8 +21,12 @@ const headerStyles = createUseStyles({
     transition: ["padding"],
     transitionDuration: 300,
 
+    position: 'absolute',
+    left: 30,
+    zIndex: 1,
+
     "&:hover": {
-      padding: 15,
+      padding: 10,
     },
   },
   headerTitleTextBox: {
@@ -34,8 +38,25 @@ const headerStyles = createUseStyles({
   headerTitleText: {
     fontFamily: '"Source Code Pro"',
     color: "white",
-    fontSize: "30px",
+    fontSize: 25,
     whiteSpace: "nowrap",
+  },
+
+  '@media (max-width: 1200px)': {
+    headerContainer: {
+      height: 'auto',
+      padding: 10
+    },
+    headerAvatarBox: {
+      left: 15,
+
+      "&:hover": {
+        padding: 5,
+      },
+    },
+    headerTitleText: {
+      fontSize: 18,
+    },
   },
 });
 

@@ -1,72 +1,94 @@
 import React, { useEffect, useState } from "react";
-import { Box, Tabs, Tab } from "@mui/material";
+import { Box, Tabs, Tab, Tooltip } from "@mui/material";
 import HeaderNavStyles from "./HeaderNav.styles";
 import useWindowDimensions from "../../../helpers/useWindowDimensions";
-import PersonIcon from '@mui/icons-material/Person';
-import WorkIcon from '@mui/icons-material/Work';
-import DataObjectIcon from '@mui/icons-material/DataObject';
-import LinkIcon from '@mui/icons-material/Link';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
+import PersonIcon from "@mui/icons-material/Person";
+import WorkIcon from "@mui/icons-material/Work";
+import DataObjectIcon from "@mui/icons-material/DataObject";
+import LinkIcon from "@mui/icons-material/Link";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
 
 function LinkTab(props) {
+  const { isMobile, ...tabProps } = props;
+  const newLabel = isMobile ? null : tabProps.label;
+  const tooltipTitle = !isMobile ? null : tabProps.label;
+
   return (
-    <Tab
-      component="a"
-      onClick={(event) => {
-        event.preventDefault();
-      }}
-      {...props}
-    />
+    <Tooltip title={tooltipTitle} enterTouchDelay={0}>
+      <Tab
+        component="a"
+        onClick={(event) => {
+          event.preventDefault();
+        }}
+        {...tabProps}
+        label={newLabel}
+      />
+    </Tooltip>
   );
 }
 
 export default function HeaderNav() {
   const classes = HeaderNavStyles();
   const windowDimensions = useWindowDimensions();
-  
-  const [ value, setValue ] = useState(0);
-  const [ isMobile, setIsMobile ] = useState();
+
+  const [value, setValue] = useState(0);
+  const [isMobile, setIsMobile] = useState(null);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   useEffect(() => {
-    if(windowDimensions){
+    if (windowDimensions) {
       const { width } = windowDimensions;
-      width < 1024 ? setIsMobile(true) : setIsMobile(false);
+      width < 1200 ? setIsMobile(true) : setIsMobile(false);
     }
-  }, [windowDimensions])
+  }, [windowDimensions]);
 
   return (
     <Box>
-      {!isMobile ? (
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          className={classes.tabs}
-          TabIndicatorProps={{ sx: { backgroundColor: "white" } }}
-        >
-          <LinkTab className={classes.tab} label="About Me"></LinkTab>
-          <LinkTab className={classes.tab} label="Projects"></LinkTab>
-          <LinkTab className={classes.tab} label="Technologies"></LinkTab>
-          <LinkTab className={classes.tab} label="Connect"></LinkTab>
-          <LinkTab className={classes.tab} label="Contact"></LinkTab>
-        </Tabs>
-      ) : (
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          className={classes.tabs}
-          TabIndicatorProps={{ sx: { backgroundColor: "white" } }}
-        >
-          <LinkTab className={classes.tab} icon={<PersonIcon/>}></LinkTab>
-          <LinkTab className={classes.tab} icon={<WorkIcon/>}></LinkTab>
-          <LinkTab className={classes.tab} icon={<DataObjectIcon/>}></LinkTab>
-          <LinkTab className={classes.tab} icon={<LinkIcon/>}></LinkTab>
-          <LinkTab className={classes.tab} icon={<ContactMailIcon/>}></LinkTab>
-        </Tabs>
-      )}
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        className={classes.tabs}
+        TabIndicatorProps={{ sx: { backgroundColor: "white" } }}
+      >
+        <LinkTab
+          className={classes.tab}
+          label="About Me"
+          icon={<PersonIcon />}
+          iconPosition="start"
+          isMobile={isMobile}
+        />
+        <LinkTab
+          className={classes.tab}
+          label="Projects"
+          icon={<WorkIcon />}
+          iconPosition="start"
+          isMobile={isMobile}
+        />
+        <LinkTab
+          className={classes.tab}
+          label="Technologies"
+          icon={<DataObjectIcon />}
+          iconPosition="start"
+          isMobile={isMobile}
+        />
+        <LinkTab
+          className={classes.tab}
+          label="Connect"
+          icon={<LinkIcon />}
+          iconPosition="start"
+          isMobile={isMobile}
+        />
+        <LinkTab
+          className={classes.tab}
+          label="Contact"
+          icon={<ContactMailIcon />}
+          iconPosition="start"
+          isMobile={isMobile}
+        />
+      </Tabs>
     </Box>
   );
 }
