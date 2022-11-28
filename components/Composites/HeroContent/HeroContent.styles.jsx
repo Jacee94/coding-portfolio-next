@@ -65,5 +65,35 @@ export const heroContentStyles = createUseStyles({
         '&:last-child': {
             marginBottom: 0
         }
+    },
+
+    '@media (max-width: 1200px)': {
+        heroContentContainer: {
+            flexDirection: 'column'
+        },
+        heroContentTitle: {
+            maxWidth: 'max-content'
+        }
+    },
+
+    '@media (max-width: 768px)': {
+        heroContentAboutContainer: {
+            flexDirection: 'column',
+            margin: 0
+        },
+        heroContentAboutImgWrapper: {
+            '& > *': {
+                width: '250px !important',
+                height: '250px !important'
+            }
+        },
+        heroContentAboutDesc: {
+            width: 250,
+            margin: '0 auto',
+            paddingTop: 0,
+            '& > *': {
+                textAlign: 'center'
+            }
+        }
     }
 })
