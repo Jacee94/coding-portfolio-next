@@ -10,6 +10,7 @@ export const heroStyles = createUseStyles({
         backgroundPosition: 'center center',
         height: 792,
         paddingBottom: 100,
+        scrollMarginTop: '110px',
 
         '-webkit-mask-image': 'linear-gradient(to top, black 0%, black 100%), linear-gradient(to bottom, transparent 0%, black 100%)',
         '-webkit-mask-position': 'center, bottom',

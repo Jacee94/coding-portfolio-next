@@ -1,8 +1,26 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Header, Hero, Projects } from '../components/index';
+import { Header, Hero, Projects, Technologies } from '../components/index';
+import { useRef } from 'react';
 
 export default function Home() {
+  const headerRef = useRef();
+  const heroRef = useRef();
+  const projectsRef = useRef(null);
+  const technologiesRef = useRef();
+
+  const handleHeroClick = () => {
+    heroRef.current.scrollIntoView({behavior: 'smooth'});
+  }
+
+  const handleProjectsClick = () => {
+    projectsRef.current.scrollIntoView({behavior: 'smooth'});
+  }
+
+  const handleTechnologiesClick = () => {
+    technologiesRef.current.scrollIntoView({behavior: 'smooth'});
+  }
+
   return (
     <>
       <div className={styles.container}>
@@ -14,9 +32,15 @@ export default function Home() {
       </div>
 
       <main>
-        <Header></Header>
-        <Hero></Hero>
-        <Projects></Projects>
+        <Header
+          refProp={headerRef}
+          navHeroClick={handleHeroClick}
+          navProjectsClick={handleProjectsClick}
+          navTechnologiesClick={handleTechnologiesClick}
+        />
+        <Hero refProp={heroRef} />
+        <Projects refProp={projectsRef}></Projects>
+        <Technologies refProp={technologiesRef}></Technologies>
       </main>
     </>
   )

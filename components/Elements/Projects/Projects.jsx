@@ -1,13 +1,16 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { projectStyles } from './Projects.styles';
 
-export default function Projects() {
+export default function Projects(props) {
+    const { refProp } = props;
     const classes = projectStyles();
 
     return (
-        <Box className={classes.projectSection}>
-
+        <Box ref={refProp} className={classes.projectSection}>
+            <Box className={classes.projectsTitle}>
+                <Typography variant="h3">Projects</Typography>
+            </Box>
         </Box>
     )
 }

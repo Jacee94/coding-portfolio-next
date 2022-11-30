@@ -2,6 +2,9 @@ import { createUseStyles } from "react-jss";
 
 const headerStyles = createUseStyles({
   headerContainer: {
+    position: 'sticky',
+    top: 0,
+    zIndex: 1,
     display: "flex",
     justifyContent: 'end',
     alignItems: 'center',

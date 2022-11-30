@@ -4,13 +4,14 @@ import HeaderAvatar from "../../Atoms/HeaderAvatar/HeaderAvatar";
 import HeaderNav from "../../Composites/HeaderNav/HeaderNav";
 import headerStyles from "./Header.styles";
 
-export default function Header() {
+export default function Header(props) {
+  const { refProp, navProjectsClick, navHeroClick, navTechnologiesClick } = props;
   const classes = headerStyles();
 
   const [headerAvatarHover, setHeaderAvatarHover] = useState(false);
 
   return (
-    <Box className={classes.headerContainer}>
+    <Box ref={refProp} className={classes.headerContainer}>
       <Box
         className={classes.headerAvatarBox}
         onMouseEnter={() => setHeaderAvatarHover(true)}
@@ -29,7 +30,11 @@ export default function Header() {
         </Collapse>
       </Box>
 
-      <HeaderNav></HeaderNav>
+      <HeaderNav 
+        navHeroClick={navHeroClick}
+        navProjectsClick={navProjectsClick}
+        navTechnologiesClick={navTechnologiesClick}
+      />
     </Box>
   );
 }

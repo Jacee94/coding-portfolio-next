@@ -1,15 +1,14 @@
 import { createUseStyles } from "react-jss";
 
-export const projectStyles = createUseStyles({
-    projectSection: {
+export const technologiesStyles = createUseStyles({
+    technologiesSection: {
         height: 700,
-        scrollMarginTop: '108px',
-        paddingTop: 40
     },
-    projectsTitle: {
+    technologiesTitle: {
         display: 'flex',
         justifyContent: 'center',
         color: 'white',
+        margin: 40,
 
         '& > *': {
             fontFamily: 'Source Sans Pro',
