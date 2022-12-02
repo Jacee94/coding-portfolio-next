@@ -2,7 +2,7 @@ import { createUseStyles } from "react-jss";
 
 const HeaderNavStyles = createUseStyles({
   tab: {
-    color: "#c7daeb",
+    color: "#909fad",
     textShadow: "2px 2px 2px black",
     fontFamily: "Source Sans Pro",
     fontSize: 25,
@@ -11,7 +11,7 @@ const HeaderNavStyles = createUseStyles({
     transitionDuration: 250,
 
     '&:not(.Mui-selected):hover': {
-      backgroundColor: '#243b4d',
+      backgroundColor: '#1c2d3b',
     },
 
     "&.Mui-selected": {

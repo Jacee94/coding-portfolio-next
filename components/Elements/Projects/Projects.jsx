@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import { ProjectsCards } from '../../index';
 import { projectStyles } from './Projects.styles';
 
 export default function Projects(props) {
@@ -11,6 +12,7 @@ export default function Projects(props) {
             <Box className={classes.projectsTitle}>
                 <Typography variant="h3">Projects</Typography>
             </Box>
+            <ProjectsCards />
         </Box>
     )
 }
