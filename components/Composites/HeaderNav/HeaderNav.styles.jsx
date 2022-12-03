@@ -7,11 +7,12 @@ const HeaderNavStyles = createUseStyles({
     fontFamily: "Source Sans Pro",
     fontSize: 25,
     borderRadius: "10px",
-    transition: ['background-color'],
+    transition: ["background-color"],
     transitionDuration: 250,
 
-    '&:not(.Mui-selected):hover': {
-      backgroundColor: '#1c2d3b',
+    "&:not(.Mui-selected):hover": {
+      backgroundColor: "#1c2d3b",
+      color: "white",
     },
 
     "&.Mui-selected": {
@@ -22,16 +23,16 @@ const HeaderNavStyles = createUseStyles({
       borderRadius: "10px",
     },
 
-    '& .MuiTouchRipple-root': {
-      color: '#0c131a'
-    }
+    "& .MuiTouchRipple-root": {
+      color: "#909fad",
+    },
   },
 
-  '@media (max-width: 720px)': {
+  "@media (max-width: 720px)": {
     tab: {
-      minWidth: 55
-    }
-  }
+      minWidth: 55,
+    },
+  },
 });
 
 export default HeaderNavStyles;

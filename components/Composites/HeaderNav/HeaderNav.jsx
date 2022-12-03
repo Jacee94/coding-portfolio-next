@@ -28,7 +28,7 @@ function LinkTab(props) {
 }
 
 export default function HeaderNav(props) {
-  const {navHeroClick, navProjectsClick, navTechnologiesClick} = props;
+  const { navHeroClick, navProjectsClick, navTechnologiesClick } = props;
 
   const classes = HeaderNavStyles();
   const windowDimensions = useWindowDimensions();
