@@ -1,6 +1,8 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { heroContentStyles } from "./HeroContent.styles";
+import Image from "next/image";
+import bioImg from "../../../public/bioImg.jpg";
 
 export default function () {
   const classes = heroContentStyles();
@@ -12,7 +14,7 @@ export default function () {
       </Box>
       <Box className={classes.heroContentAboutContainer}>
         <Box className={classes.heroContentAboutImgWrapper}>
-          <img src={"/bioImg.jpg"}></img>
+          <Image src={bioImg} placeholder="blur"></Image>
         </Box>
         <Box className={classes.heroContentAboutDesc}>
           <Typography variant={"h3"}>Hey there! I'm Jace!</Typography>

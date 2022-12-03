@@ -12,24 +12,32 @@ export default function ProjectsCards() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (repoData) {
+    if (typeof repoData.data != "undefined") {
       setIsLoading(false);
     }
-  }, repoData);
+  }, [repoData.data]);
 
   return (
     <Box className={classes.projectContainer}>
-      {repoData?.data
-        ? repoData.data.map((item, index) => {
-            return (
-              <ProjectCard
-                key={`project-card-${index}`}
-                project={item}
-                isLoading={isLoading}
-              />
-            );
-          })
-        : "LOADING PROJECTS"}
+      {repoData?.data ? (
+        repoData.data.map((item, index) => {
+          return (
+            <ProjectCard
+              key={`project-card-${index}`}
+              project={item}
+              isLoading={isLoading}
+            />
+          );
+        })
+      ) : (
+        <>
+          <ProjectCard isLoading={isLoading} />
+          <ProjectCard isLoading={isLoading} />
+          <ProjectCard isLoading={isLoading} />
+          <ProjectCard isLoading={isLoading} />
+          <ProjectCard isLoading={isLoading} />
+        </>
+      )}
     </Box>
   );
 }

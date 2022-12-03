@@ -22,6 +22,7 @@ export const projectCardStyles = createUseStyles({
     color: "white",
     flexGrow: 1,
     maxHeight: 179,
+    minHeight: 179,
   },
   projectCardActions: {
     display: "flex",
