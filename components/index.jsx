@@ -8,3 +8,4 @@ export { default as HeroContent } from './Composites/HeroContent/HeroContent';
 export { default as ProjectsCards } from './Composites/ProjectsCards/ProjectsCards';
 
 export { default as HeaderAvatar } from './Atoms/HeaderAvatar/HeaderAvatar';
+export { default as StyledButton } from './Atoms/StyledButton/StyledButton';

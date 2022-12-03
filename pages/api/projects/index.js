@@ -16,10 +16,12 @@ export default async function handler(req, res) {
             const filteredData = data.filter((repo) => repo.topics.includes(repoTypes))
 
             filteredData.forEach((repo) => {
+                console.log({repo})
                 const repoData = {
                     name: repo.name,
                     description: repo.description,
-                    repo_url: repo.html_url
+                    repo_url: repo.html_url,
+                    deployments_url: repo.deployments_url
                 }
 
                 filteredRepos.push(repoData);
