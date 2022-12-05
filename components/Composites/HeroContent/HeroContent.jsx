@@ -14,7 +14,11 @@ export default function () {
       </Box>
       <Box className={classes.heroContentAboutContainer}>
         <Box className={classes.heroContentAboutImgWrapper}>
-          <Image src={bioImg} placeholder="blur"></Image>
+          <Image
+            src={bioImg}
+            placeholder="blur"
+            alt="Jace Edwards Profile Picture"
+          ></Image>
         </Box>
         <Box className={classes.heroContentAboutDesc}>
           <Typography variant={"h3"}>Hey there! I'm Jace!</Typography>

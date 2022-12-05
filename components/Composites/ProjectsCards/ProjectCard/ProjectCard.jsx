@@ -24,7 +24,7 @@ export default function ProjectCard(props) {
     <Card className={classes.projectCard}>
       <CardContent>
         {isLoading ? (
-          <Skeleton height={24}></Skeleton>
+          <Skeleton height={24} sx={{ bgcolor: "#516475" }}></Skeleton>
         ) : (
           <Fade in={true}>
             <Typography className={classes.projectCardTitle} variant={"h4"}>
@@ -34,7 +34,11 @@ export default function ProjectCard(props) {
         )}
       </CardContent>
       {isLoading ? (
-        <Skeleton height={200} variant="rectangular"></Skeleton>
+        <Skeleton
+          height={200}
+          variant="rectangular"
+          sx={{ bgcolor: "#516475" }}
+        ></Skeleton>
       ) : (
         <Fade in={true}>
           <CardMedia
@@ -47,12 +51,12 @@ export default function ProjectCard(props) {
       <CardContent className={classes.projectCardDescription}>
         {isLoading ? (
           <>
-            <Skeleton />
-            <Skeleton />
-            <Skeleton />
-            <Skeleton />
-            <Skeleton />
-            <Skeleton width="60%" />
+            <Skeleton sx={{ bgcolor: "#516475" }} />
+            <Skeleton sx={{ bgcolor: "#516475" }} />
+            <Skeleton sx={{ bgcolor: "#516475" }} />
+            <Skeleton sx={{ bgcolor: "#516475" }} />
+            <Skeleton sx={{ bgcolor: "#516475" }} />
+            <Skeleton width="60%" sx={{ bgcolor: "#516475" }} />
           </>
         ) : (
           <Fade in={true}>
@@ -62,7 +66,12 @@ export default function ProjectCard(props) {
       </CardContent>
       <CardActions className={classes.projectCardActions}>
         {isLoading ? (
-          <Skeleton width={98} height={36} variant="rectangle" />
+          <Skeleton
+            width={98}
+            height={36}
+            variant="rectangle"
+            sx={{ bgcolor: "#516475" }}
+          />
         ) : (
           <Fade in={true}>
             <Link href={!isLoading && repo_url} rel="noopener" target="_blank">
@@ -71,7 +80,12 @@ export default function ProjectCard(props) {
           </Fade>
         )}
         {isLoading ? (
-          <Skeleton width={125} height={36} variant="rectangle" />
+          <Skeleton
+            width={125}
+            height={36}
+            variant="rectangle"
+            sx={{ bgcolor: "#516475" }}
+          />
         ) : (
           <Fade in={true}>
             <Link
