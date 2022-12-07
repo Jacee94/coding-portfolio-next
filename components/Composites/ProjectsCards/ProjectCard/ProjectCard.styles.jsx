@@ -14,6 +14,18 @@ export const projectCardStyles = createUseStyles({
     fontSize: 20,
     textAlign: "center",
   },
+  projectCardImage: {
+    width: "100%",
+    height: 200,
+    padding: 0,
+    overflow: "hidden",
+
+    "& > img": {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    },
+  },
   projectCardBottom: {
     display: "flex",
     flexDirection: "column",

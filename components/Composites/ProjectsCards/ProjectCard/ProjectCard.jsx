@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Typography,
   Card,
@@ -11,6 +12,7 @@ import {
 } from "@mui/material";
 import { projectCardStyles } from "./ProjectCard.styles";
 import { StyledButton } from "../../../index";
+import { useEffect } from "react";
 
 export default function ProjectCard(props) {
   const {
@@ -19,6 +21,16 @@ export default function ProjectCard(props) {
   } = props;
 
   const classes = projectCardStyles();
+
+  const [imageLoading, setImageLoading] = useState(true);
+  const [showImage, setShowImage] = useState(false);
+
+  const handleShowImage = () => {
+    setImageLoading(false);
+    setTimeout(() => {
+      setShowImage(true);
+    }, 250);
+  };
 
   return (
     <Card className={classes.projectCard}>
@@ -40,13 +52,27 @@ export default function ProjectCard(props) {
           sx={{ bgcolor: "#516475" }}
         ></Skeleton>
       ) : (
-        <Fade in={true}>
-          <CardMedia
-            component="img"
-            height="200"
-            image={!isLoading && screenshot}
-          />
-        </Fade>
+        <CardContent className={classes.projectCardImage}>
+          <Fade in={imageLoading} timeout={{ appear: 0, exit: 200 }}>
+            <Box>
+              <Skeleton
+                height={200}
+                variant="rectangular"
+                sx={{
+                  bgcolor: "#516475",
+                  display: !showImage ? "block" : "none",
+                }}
+              />
+            </Box>
+          </Fade>
+          <Fade in={showImage}>
+            <img
+              src={screenshot}
+              style={{ display: showImage ? "block" : "none" }}
+              onLoad={handleShowImage}
+            />
+          </Fade>
+        </CardContent>
       )}
       <CardContent className={classes.projectCardDescription}>
         {isLoading ? (

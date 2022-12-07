@@ -15,4 +15,7 @@ export const projectStyles = createUseStyles({
       fontFamily: "Source Sans Pro",
     },
   },
+  projectsImageWrapper: {
+    position: "relative",
+  },
 });
