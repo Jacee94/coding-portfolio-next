@@ -7,7 +7,7 @@ const HeaderNavStyles = createUseStyles({
     fontFamily: "Source Sans Pro",
     fontSize: 25,
     borderRadius: "10px",
-    transition: ["background-color"],
+    transition: ["color", "background-color"],
     transitionDuration: 250,
 
     "&:not(.Mui-selected):hover": {
