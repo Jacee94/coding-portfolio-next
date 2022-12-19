@@ -5,7 +5,13 @@ import HeaderNav from "../../Composites/HeaderNav/HeaderNav";
 import headerStyles from "./Header.styles";
 
 export default function Header(props) {
-  const { refProp, navProjectsClick, navHeroClick, navTechnologiesClick } = props;
+  const {
+    refProp,
+    navProjectsClick,
+    navHeroClick,
+    navTechnologiesClick,
+    navConnectClick,
+  } = props;
   const classes = headerStyles();
 
   const [headerAvatarHover, setHeaderAvatarHover] = useState(false);
@@ -30,10 +36,11 @@ export default function Header(props) {
         </Collapse>
       </Box>
 
-      <HeaderNav 
+      <HeaderNav
         navHeroClick={navHeroClick}
         navProjectsClick={navProjectsClick}
         navTechnologiesClick={navTechnologiesClick}
+        navConnectClick={navConnectClick}
       />
     </Box>
   );

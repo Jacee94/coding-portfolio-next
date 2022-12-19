@@ -1,25 +1,36 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import { Header, Hero, Projects, Technologies } from '../components/index';
-import { useRef } from 'react';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import {
+  Connect,
+  Header,
+  Hero,
+  Projects,
+  Technologies,
+} from "../components/index";
+import { useRef } from "react";
 
 export default function Home() {
   const headerRef = useRef();
   const heroRef = useRef();
   const projectsRef = useRef(null);
   const technologiesRef = useRef();
+  const connectRef = useRef();
 
   const handleHeroClick = () => {
-    heroRef.current.scrollIntoView({behavior: 'smooth'});
-  }
+    heroRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleProjectsClick = () => {
-    projectsRef.current.scrollIntoView({behavior: 'smooth'});
-  }
+    projectsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleTechnologiesClick = () => {
-    technologiesRef.current.scrollIntoView({behavior: 'smooth'});
-  }
+    technologiesRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleConnectClick = () => {
+    connectRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
@@ -37,11 +48,13 @@ export default function Home() {
           navHeroClick={handleHeroClick}
           navProjectsClick={handleProjectsClick}
           navTechnologiesClick={handleTechnologiesClick}
+          navConnectClick={handleConnectClick}
         />
         <Hero refProp={heroRef} />
-        <Projects refProp={projectsRef}></Projects>
-        <Technologies refProp={technologiesRef}></Technologies>
+        <Projects refProp={projectsRef} />
+        <Technologies refProp={technologiesRef} />
+        <Connect refProp={connectRef} />
       </main>
     </>
-  )
+  );
 }

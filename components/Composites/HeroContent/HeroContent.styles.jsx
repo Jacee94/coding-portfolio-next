@@ -2,7 +2,9 @@ import { createUseStyles } from "react-jss";
 
 export const heroContentStyles = createUseStyles({
   heroContentContainer: {
-    display: "flex",
+    zIndex: 1,
+    display: "flex !important",
+    position: "static !important",
     alignItems: "center",
 
     "& > *": {
@@ -27,7 +29,7 @@ export const heroContentStyles = createUseStyles({
     border: "solid 3px #172531",
     borderRadius: 20,
     transition: ["transform"],
-    transitionDuration: 200,
+    transitionDuration: 250,
 
     "& > *": {
       margin: 20,

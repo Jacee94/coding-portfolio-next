@@ -28,7 +28,12 @@ function LinkTab(props) {
 }
 
 export default function HeaderNav(props) {
-  const { navHeroClick, navProjectsClick, navTechnologiesClick } = props;
+  const {
+    navHeroClick,
+    navProjectsClick,
+    navTechnologiesClick,
+    navConnectClick,
+  } = props;
 
   const classes = HeaderNavStyles();
   const windowDimensions = useWindowDimensions();
@@ -85,6 +90,7 @@ export default function HeaderNav(props) {
           icon={<LinkIcon />}
           iconPosition="start"
           isMobile={isMobile}
+          onClick={navConnectClick}
         />
         <LinkTab
           className={classes.tab}

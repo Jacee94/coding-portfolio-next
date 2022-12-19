@@ -9,6 +9,7 @@ body {
   cursor: default;
   user-select: none;
   background-color: #2f4b63;
+  overflow-x: clip;
 }
 
 a {

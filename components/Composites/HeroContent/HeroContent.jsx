@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { heroContentStyles } from "./HeroContent.styles";
 import Image from "next/image";
