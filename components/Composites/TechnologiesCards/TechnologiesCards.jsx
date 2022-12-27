@@ -8,10 +8,12 @@ export default function TechnologiesCards() {
 
   return (
     <Box className={classes.techCardsWrapper}>
-      {technologiesData &&
-        technologiesData.map((technology, index) => {
-          return <TechnologyCard {...technology} key={index} />;
-        })}
+      <Box className={classes.techCardsScroller}>
+        {technologiesData &&
+          technologiesData.map((technology, index) => {
+            return <TechnologyCard {...technology} key={index} />;
+          })}
+      </Box>
     </Box>
   );
 }

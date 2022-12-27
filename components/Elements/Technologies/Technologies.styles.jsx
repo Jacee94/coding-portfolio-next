@@ -2,7 +2,9 @@ import { createUseStyles } from "react-jss";
 
 export const technologiesStyles = createUseStyles({
   technologiesSection: {
-    height: 700,
+    display: "flex",
+    flexDirection: "column",
+    height: "calc(100vh - 74px)",
     scrollMarginTop: "108px",
     padding: 40,
   },
@@ -10,9 +12,16 @@ export const technologiesStyles = createUseStyles({
     display: "flex",
     justifyContent: "center",
     color: "white",
+    textShadow: "3px 3px 3px black",
 
     "& > *": {
       fontFamily: "Source Sans Pro",
+    },
+  },
+
+  "@media (max-width: 1200px)": {
+    technologiesSection: {
+      scrollMarginTop: "74px",
     },
   },
 });

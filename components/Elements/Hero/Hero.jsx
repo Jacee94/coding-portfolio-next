@@ -21,13 +21,11 @@ export default function Hero(props) {
   }, []);
 
   return (
-    <Box>
-      <Box ref={refProp} className={classes.heroContainer}>
-        <Box ref={sceneRef} className={classes.bgImageContainer}>
-          <img src="/bio-bg.jpg" className={classes.bgImage} data-depth=".50" />
-        </Box>
-        <HeroContent />
+    <Box ref={refProp} className={classes.heroContainer}>
+      <Box ref={sceneRef} className={classes.bgImageContainer}>
+        <img src="/bio-bg.jpg" className={classes.bgImage} data-depth=".50" />
       </Box>
+      <HeroContent />
     </Box>
   );
 }

@@ -2,7 +2,7 @@ import { createUseStyles } from "react-jss";
 
 export const projectStyles = createUseStyles({
   projectSection: {
-    height: 700,
+    height: "calc(100vh - 74px)",
     scrollMarginTop: "108px",
     padding: 40,
   },
@@ -10,6 +10,7 @@ export const projectStyles = createUseStyles({
     display: "flex",
     justifyContent: "center",
     color: "white",
+    textShadow: "3px 3px 3px black",
 
     "& > *": {
       fontFamily: "Source Sans Pro",
@@ -17,5 +18,11 @@ export const projectStyles = createUseStyles({
   },
   projectsImageWrapper: {
     position: "relative",
+  },
+
+  "@media (max-width: 1200px)": {
+    projectSection: {
+      scrollMarginTop: "74px",
+    },
   },
 });

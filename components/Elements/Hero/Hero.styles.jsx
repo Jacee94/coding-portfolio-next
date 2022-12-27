@@ -5,9 +5,9 @@ export const heroStyles = createUseStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: 792,
+    height: "calc(100vh - 74px)",
     paddingBottom: 100,
-    scrollMarginTop: "110px",
+    scrollMarginTop: "108px",
 
     "-webkit-mask-image":
       "linear-gradient(to top, black 0%, black 100%), linear-gradient(to bottom, transparent 0%, black 100%)",
@@ -25,19 +25,20 @@ export const heroStyles = createUseStyles({
   },
 
   bgImageContainer: {
+    overflow: "clip",
     position: "absolute !important",
     minWidth: "100%",
-    height: "100%",
+    height: "calc(100vh + 250px)",
   },
 
   bgImage: {
     position: "absolute !important",
     top: "-100px !important",
     left: "-100px !important",
-    maxWidth: "calc(100% + 200px)",
-    maxHeight: "calc(100% + 200px)",
-    minHeight: "calc(100% + 200px)",
-    minWidth: "calc(100% + 200px)",
+    maxWidth: "calc(100% + 250px)",
+    maxHeight: "calc(100% + 250px)",
+    minHeight: "calc(100% + 250px)",
+    minWidth: "calc(100% + 250px)",
     objectFit: "cover",
   },
 
