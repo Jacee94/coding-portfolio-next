@@ -7,9 +7,9 @@ export default function Connect(props) {
   const classes = connectStyles();
 
   return (
-    <Box ref={refProp}>
+    <Box ref={refProp} className={classes.connectSection}>
       <Typography variant="h3">Connect</Typography>
-      <Box>
+      <Box className={classes.connectContent}>
         <div
           className="badge-base LI-profile-badge"
           data-locale="en_US"

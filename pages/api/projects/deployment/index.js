@@ -11,17 +11,20 @@ export default async function handler(req, res) {
     const response = await fetch(url, authorizationHeader);
     const deployments = await response.json();
 
-    const statusesUrl = deployments[0].statuses_url;
+    const { statuses_url: statusesUrl } = deployments[0] || {};
 
-    const statusesResponse = await fetch(statusesUrl, authorizationHeader);
-    const statuses = await statusesResponse.json();
+    if (statusesUrl) {
+      const statusesResponse = await fetch(statusesUrl, authorizationHeader);
+      const statuses = await statusesResponse.json();
 
-    const currentDeployment = statuses.find(
-      (status) => status.state === "success"
-    );
-    const returnUrl = currentDeployment.environment_url;
+      const currentDeployment = statuses.find(
+        (status) => status.state === "success"
+      );
+      const returnUrl = currentDeployment.environment_url;
 
-    return res.status(200).json(returnUrl);
+      return res.status(200).json(returnUrl);
+    }
+    return res.status(404).json({ error: "Not found" });
   } catch (err) {
     console.error(err);
     return res.status(500);
