@@ -5,8 +5,8 @@ import useWindowDimensions from "../../../helpers/useWindowDimensions";
 import PersonIcon from "@mui/icons-material/Person";
 import WorkIcon from "@mui/icons-material/Work";
 import DataObjectIcon from "@mui/icons-material/DataObject";
-import LinkIcon from "@mui/icons-material/Link";
-import ContactMailIcon from "@mui/icons-material/ContactMail";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import EmailIcon from "@mui/icons-material/Email";
 
 function LinkTab(props) {
   const { isMobile, ...tabProps } = props;
@@ -86,18 +86,18 @@ export default function HeaderNav(props) {
         />
         <LinkTab
           className={classes.tab}
-          label="Connect"
-          icon={<LinkIcon />}
+          label="Contact"
+          icon={<EmailIcon />}
           iconPosition="start"
           isMobile={isMobile}
-          onClick={navConnectClick}
         />
         <LinkTab
           className={classes.tab}
-          label="Contact"
-          icon={<ContactMailIcon />}
+          label="Connect"
+          icon={<PeopleAltIcon />}
           iconPosition="start"
           isMobile={isMobile}
+          onClick={navConnectClick}
         />
       </Tabs>
     </Box>

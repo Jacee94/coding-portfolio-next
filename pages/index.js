@@ -6,7 +6,8 @@ import {
   Hero,
   Projects,
   Technologies,
-} from "../components/index";
+  Contact,
+} from "../components";
 import { useRef } from "react";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
   const projectsRef = useRef(null);
   const technologiesRef = useRef();
   const connectRef = useRef();
+  const contactRef = useRef();
 
   const handleHeroClick = () => {
     heroRef.current.scrollIntoView({ behavior: "smooth" });
@@ -53,6 +55,7 @@ export default function Home() {
         <Hero refProp={heroRef} />
         <Projects refProp={projectsRef} />
         <Technologies refProp={technologiesRef} />
+        <Contact refProp={contactRef} />
         <Connect refProp={connectRef} />
       </main>
     </>

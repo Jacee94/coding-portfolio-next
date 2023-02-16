@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { technologiesStyles } from "./Technologies.styles";
 import TechnologiesCards from "../../Composites/TechnologiesCards/TechnologiesCards";
+import { SectionTitle } from "../..";
 
 export default function Technologies(props) {
   const { refProp } = props;
@@ -9,9 +10,7 @@ export default function Technologies(props) {
 
   return (
     <Box ref={refProp} className={classes.technologiesSection}>
-      <Box className={classes.technologiesTitle}>
-        <Typography variant="h3">Technologies</Typography>
-      </Box>
+      <SectionTitle title="Technologies" />
       <TechnologiesCards />
     </Box>
   );

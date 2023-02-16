@@ -3,6 +3,7 @@ import { Box, Typography, Collapse } from "@mui/material";
 import HeaderAvatar from "../../Atoms/HeaderAvatar/HeaderAvatar";
 import HeaderNav from "../../Composites/HeaderNav/HeaderNav";
 import headerStyles from "./Header.styles";
+import Technologies from "../Technologies/Technologies";
 
 export default function Header(props) {
   const {

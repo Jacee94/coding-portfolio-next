@@ -1,6 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { connectStyles } from "./Connect.styles";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import Link from "@mui/material/Link";
 
 export default function Connect(props) {
   const { refProp } = props;
@@ -10,22 +13,21 @@ export default function Connect(props) {
     <Box ref={refProp} className={classes.connectSection}>
       <Typography variant="h3">Connect</Typography>
       <Box className={classes.connectContent}>
-        <div
-          className="badge-base LI-profile-badge"
-          data-locale="en_US"
-          data-size="medium"
-          data-theme="dark"
-          data-type="VERTICAL"
-          data-vanity="jace-edwards94"
-          data-version="v1"
-        >
-          <a
-            className="badge-base__link LI-simple-link"
-            href="https://www.linkedin.com/in/jace-edwards94?trk=profile-badge"
+        <Box className={classes.connectLink}>
+          <LinkedInIcon />
+          <Link
+            href="https://www.linkedin.com/in/jace-edwards94/"
+            target="_blank"
           >
-            Jace Edwards
-          </a>
-        </div>
+            Jace Edwards LinkedIn Profile
+          </Link>
+        </Box>
+        <Box className={classes.connectLink}>
+          <GitHubIcon />
+          <Link href="https://github.com/Jacee94" target="_blank">
+            Jace Edwards GitHub
+          </Link>
+        </Box>
       </Box>
     </Box>
   );

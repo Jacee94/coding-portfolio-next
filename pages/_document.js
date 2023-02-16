@@ -24,16 +24,16 @@ export default class JssDocument extends Document {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
           />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
           <script
             src="https://platform.linkedin.com/badges/js/profile.js"
             async
             defer
             type="text/javascript"
           ></script>
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
         </body>
       </Html>
     );
