@@ -19,8 +19,8 @@ export default function ProjectsCards() {
 
   return (
     <Box className={classes.projectContainer}>
-      {repoData?.data ? (
-        repoData.data.map((item, index) => {
+      {Array.isArray(repoData?.data) ? (
+        repoData?.data?.map((item, index) => {
           return (
             <ProjectCard
               key={`project-card-${index}`}

@@ -13,27 +13,27 @@ import { Alert, Snackbar } from "@mui/material";
 
 export default function Contact({ refProp }) {
   const [name, setName] = useState("");
-  const [nameError, setNameError] = useState({ error: false, helperText: "" });
+  const [nameError, setNameError] = useState({ error: false, helperText: " " });
   const nameRef = useRef();
 
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState({
     error: false,
-    helperText: "",
+    helperText: " ",
   });
   const emailRef = useRef();
 
   const [company, setCompany] = useState("");
   const [companyError, setCompanyError] = useState({
     error: false,
-    helperText: "",
+    helperText: " ",
   });
   const companyRef = useRef();
 
   const [message, setMessage] = useState("");
   const [messageError, setMessageError] = useState({
     error: false,
-    helperText: "",
+    helperText: " ",
   });
   const messageRef = useRef();
 

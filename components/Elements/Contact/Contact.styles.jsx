@@ -36,6 +36,8 @@ const ContactForm = styled("form")(({ theme }) => ({
 
 const StyledTextfield = styled(TextField)(({ theme }) => ({
   margin: 20,
+  marginBottom: 0,
+  width: 280
 }));
 
 const SubmitBtn = styled(Button)(({ theme }) => ({
