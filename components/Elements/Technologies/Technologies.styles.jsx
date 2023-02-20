@@ -4,7 +4,6 @@ export const technologiesStyles = createUseStyles({
   technologiesSection: {
     display: "flex",
     flexDirection: "column",
-    height: "calc(100vh - 74px)",
     scrollMarginTop: "108px",
     padding: 40,
   },

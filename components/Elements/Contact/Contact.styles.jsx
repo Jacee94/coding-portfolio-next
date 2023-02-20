@@ -5,7 +5,6 @@ const Content = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  height: "calc(100vh - 74px)",
 }));
 
 const CardWrapper = styled(Box)(({ theme }) => ({

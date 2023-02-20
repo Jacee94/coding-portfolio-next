@@ -2,7 +2,6 @@ import { createUseStyles } from "react-jss";
 
 export const projectStyles = createUseStyles({
   projectSection: {
-    height: "calc(100vh - 74px)",
     scrollMarginTop: "108px",
     padding: 40,
   },

@@ -5,9 +5,8 @@ export const heroStyles = createUseStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "calc(100vh - 74px)",
+    height: '100vh',
     paddingBottom: 100,
-    scrollMarginTop: "108px",
 
     "-webkit-mask-image":
       "linear-gradient(to top, black 0%, black 100%), linear-gradient(to bottom, transparent 0%, black 100%)",

@@ -11,6 +11,7 @@ export default function Header(props) {
     navProjectsClick,
     navHeroClick,
     navTechnologiesClick,
+    navContactClick,
     navConnectClick,
   } = props;
   const classes = headerStyles();
@@ -41,6 +42,7 @@ export default function Header(props) {
         navHeroClick={navHeroClick}
         navProjectsClick={navProjectsClick}
         navTechnologiesClick={navTechnologiesClick}
+        navContactClick={navContactClick}
         navConnectClick={navConnectClick}
       />
     </Box>

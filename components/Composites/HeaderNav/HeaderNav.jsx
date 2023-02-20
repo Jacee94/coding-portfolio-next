@@ -32,6 +32,7 @@ export default function HeaderNav(props) {
     navHeroClick,
     navProjectsClick,
     navTechnologiesClick,
+    navContactClick,
     navConnectClick,
   } = props;
 
@@ -90,6 +91,7 @@ export default function HeaderNav(props) {
           icon={<EmailIcon />}
           iconPosition="start"
           isMobile={isMobile}
+          onClick={navContactClick}
         />
         <LinkTab
           className={classes.tab}

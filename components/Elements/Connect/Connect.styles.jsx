@@ -5,7 +5,6 @@ export const connectStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    height: "calc(100vh - 74px)",
     scrollMarginTop: "108px",
     padding: 40,
   },

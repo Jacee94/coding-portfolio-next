@@ -4,6 +4,8 @@ import { connectStyles } from "./Connect.styles";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "@mui/material/Link";
+import { SectionTitle } from "../..";
+
 
 export default function Connect(props) {
   const { refProp } = props;
@@ -11,7 +13,7 @@ export default function Connect(props) {
 
   return (
     <Box ref={refProp} className={classes.connectSection}>
-      <Typography variant="h3">Connect</Typography>
+      <SectionTitle title={"Connect"}/>
       <Box className={classes.connectContent}>
         <Box className={classes.connectLink}>
           <LinkedInIcon />

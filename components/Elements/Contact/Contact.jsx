@@ -113,7 +113,7 @@ export default function Contact({ refProp }) {
       return false;
     }
 
-    stateSetter({ error: false, helperText: "" });
+    stateSetter({ error: false, helperText: " " });
     return true;
   };
 
