@@ -7,6 +7,7 @@ import WorkIcon from "@mui/icons-material/Work";
 import DataObjectIcon from "@mui/icons-material/DataObject";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import EmailIcon from "@mui/icons-material/Email";
+import DescriptionIcon from "@mui/icons-material/Description";
 
 function LinkTab(props) {
   const { isMobile, ...tabProps } = props;
@@ -33,6 +34,7 @@ export default function HeaderNav(props) {
     navProjectsClick,
     navTechnologiesClick,
     navContactClick,
+    navResumeClick,
     navConnectClick,
   } = props;
 
@@ -92,6 +94,14 @@ export default function HeaderNav(props) {
           iconPosition="start"
           isMobile={isMobile}
           onClick={navContactClick}
+        />
+        <LinkTab
+          className={classes.tab}
+          label="Resume"
+          icon={<DescriptionIcon />}
+          iconPosition="start"
+          isMobile={isMobile}
+          onClick={navResumeClick}
         />
         <LinkTab
           className={classes.tab}

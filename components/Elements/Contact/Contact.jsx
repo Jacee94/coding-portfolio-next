@@ -77,11 +77,11 @@ export default function Contact({ refProp }) {
   const validateString = (stateVal, element, stateSetter) => {
     if (
       (!stateVal || typeof stateVal !== "string") &&
-      element.dataset.id !== "company"
+      element?.dataset?.id !== "company"
     ) {
       stateSetter({
         error: true,
-        helperText: `Required field, please enter a valid ${element.dataset.id}`,
+        helperText: `Required field, please enter a valid ${element?.dataset?.id}`,
       });
       return false;
     }
@@ -166,6 +166,18 @@ export default function Contact({ refProp }) {
     }
   };
 
+  const handleNameBlur = (e) => {
+    validateString(name, nameRef.current, setNameError);
+  };
+
+  const handleBlurEmail = (e) => {
+    validateString(email, emailRef.current, setEmailError);
+  };
+
+  const handleBlurMessage = (e) => {
+    validateString(message, messageRef.current, setMessageError);
+  };
+
   return (
     <Content ref={refProp}>
       <SectionTitle title="Contact" />
@@ -214,6 +226,7 @@ export default function Contact({ refProp }) {
               helperText={nameError?.helperText}
               ref={nameRef}
               data-id="name"
+              onBlur={handleNameBlur}
             />
             <StyledTextfield
               id="email"
@@ -225,6 +238,7 @@ export default function Contact({ refProp }) {
               helperText={emailError?.helperText}
               ref={emailRef}
               data-id="email"
+              onBlur={handleBlurEmail}
             />
             <StyledTextfield
               id="company"
@@ -250,8 +264,20 @@ export default function Contact({ refProp }) {
               helperText={messageError?.helperText}
               ref={messageRef}
               data-id="message"
+              onBlur={handleBlurMessage}
             />
-            <SubmitBtn variant="contained" type="submit">
+            <SubmitBtn
+              disabled={
+                nameError?.error ||
+                !name?.length ||
+                emailError?.error ||
+                !email?.length ||
+                messageError?.error ||
+                !message?.length
+              }
+              variant="contained"
+              type="submit"
+            >
               Send Message!
             </SubmitBtn>
           </ContactForm>

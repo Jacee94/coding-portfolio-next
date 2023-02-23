@@ -7,6 +7,7 @@ import {
   Hero,
   Projects,
   Technologies,
+  Resume,
   Contact,
 } from "../components";
 import { useRef } from "react";
@@ -18,21 +19,26 @@ export default function Home() {
   const technologiesRef = useRef();
   const connectRef = useRef();
   const contactRef = useRef();
-  
+
   const [currSection, setCurrSection] = useState(<Hero refProp={heroRef} />);
-  
+
   const handleHeroClick = () => {
     // heroRef.current.scrollIntoView({ behavior: "smooth" });
     setCurrSection(<Hero refProp={heroRef} />);
   };
-  
-  const handleProjectsClick = () => setCurrSection(<Projects refProp={projectsRef} />)
-  
-  const handleTechnologiesClick = () => setCurrSection(<Technologies refProp={technologiesRef} />);
-  
-  const handleContactClick = () => setCurrSection(<Contact/>);
 
-  const handleConnectClick = () => setCurrSection(<Connect refProp={connectRef} />)
+  const handleProjectsClick = () =>
+    setCurrSection(<Projects refProp={projectsRef} />);
+
+  const handleTechnologiesClick = () =>
+    setCurrSection(<Technologies refProp={technologiesRef} />);
+
+  const handleContactClick = () => setCurrSection(<Contact />);
+
+  const handleResumeClick = () => setCurrSection(<Resume />);
+
+  const handleConnectClick = () =>
+    setCurrSection(<Connect refProp={connectRef} />);
 
   return (
     <>
@@ -51,6 +57,7 @@ export default function Home() {
           navProjectsClick={handleProjectsClick}
           navTechnologiesClick={handleTechnologiesClick}
           navContactClick={handleContactClick}
+          navResumeClick={handleResumeClick}
           navConnectClick={handleConnectClick}
         />
         {currSection}

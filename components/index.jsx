@@ -3,6 +3,8 @@ export { default as Header } from "./Elements/Header/Header";
 export { default as Projects } from "./Elements/Projects/Projects";
 export { default as Technologies } from "./Elements/Technologies/Technologies";
 export { default as Contact } from "./Elements/Contact/Contact";
+export { default as Resume } from "./Elements/Resume/Resume";
+
 export { default as Connect } from "./Elements/Connect/Connect";
 
 export { default as HeaderNav } from "./Composites/HeaderNav/HeaderNav";
